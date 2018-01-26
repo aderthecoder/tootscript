@@ -11,7 +11,12 @@ word = ''
 
 for a in code:
     word_counter = word_counter + 1
-    word = str(word) + str(a)
+    if a == ' ':
+        a = ''
+    elif a == '\n':
+        a = ''
+    else:
+        word = str(word) + str(a)
     if word_counter == 3:
         if word == 'too':
             if ptr <= 0:
